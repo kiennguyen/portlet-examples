@@ -1,9 +1,16 @@
 package com.exoplatform;
 
 import javax.portlet.PortletPreferences;
+import javax.servlet.http.HttpServletRequest;
 
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.dispatcher.DefaultActionSupport;
 import org.apache.struts2.portlet.interceptor.PortletPreferencesAware;
+import org.exoplatform.container.ExoContainer;
+import org.exoplatform.container.ExoContainerContext;
+import org.exoplatform.services.organization.OrganizationService;
+import org.exoplatform.services.organization.User;
+import org.exoplatform.services.organization.UserProfile;
 
 /**
  * @author <a href="kienna@exoplatform.com">Kien Nguyen</a>
@@ -26,6 +33,18 @@ public class UpdateNameAction extends DefaultActionSupport implements PortletPre
       preferences.setValue("lastName", lastName);
       preferences.store();
       getActionMessages().add("Name updated");
+      
+      HttpServletRequest request = ServletActionContext.getRequest();
+      if (request.getRemoteUser() != null) {
+         ExoContainer exoContainer =
+                  ExoContainerContext.getCurrentContainer();
+         OrganizationService orgService = (OrganizationService) exoContainer.getComponentInstanceOfType(OrganizationService.class);
+         User user = orgService.getUserHandler().findUserByName(request.getRemoteUser());
+         user.setFirstName(firstName);
+         user.setLastName(lastName);
+         orgService.getUserHandler().saveUser(user, true);
+      }
+      
       return SUCCESS;
    }
 
