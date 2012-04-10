@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<portlet-app
+	version="1.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	id="CustomerMS">
+
+	<portlet id="CustomerMSPortlet">
+		<description xml:lang="EN">Customer management systeom</description>
+		<portlet-name>CustomerMS</portlet-name>
+		<display-name xml:lang="EN">CustomerMS</display-name>
+    
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+
+		<expiration-cache>0</expiration-cache>
+
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+		</supports>
+
+		<supported-locale>en</supported-locale>
+
+		<portlet-info>
+			<title>CustomerMS</title>
+			<short-title>CustomerMS</short-title>
+			<keywords>CustomerMS</keywords>
+		</portlet-info>
+	</portlet>
+  
+</portlet-app>
