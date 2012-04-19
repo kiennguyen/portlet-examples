@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+   	<bean id="peopleService" class="com.minhthuong.pfi.service.PeopleServiceImpl" >
+   		<property name="peopleDao" ref="peopleDao" />
+   	</bean>
+ 
+   	<bean id="peopleDao" class="com.minhthuong.pfi.dao.PeopleDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   	</bean>
+
+</beans>

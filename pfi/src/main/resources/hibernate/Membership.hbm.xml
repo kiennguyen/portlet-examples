@@ -3,19 +3,19 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 20 April 2010 8:33:09 PM by Hibernate Tools 3.2.5.Beta -->
 <hibernate-mapping>
-    <class name="com.exoplatform.customerms.model.Customer" table="customer" catalog="mkyong">
-        <id name="customerId" type="long">
-            <column name="CUSTOMER_ID" />
+    <class name="com.minhthuong.pfi.model.Membership" table="membership" catalog="mtpfi">
+        <id name="id" type="long">
+            <column name="ID" />
             <generator class="identity" />
         </id>
         <property name="name" type="string">
             <column name="NAME" length="45" not-null="true" />
         </property>
-        <property name="address" type="string">
-            <column name="ADDRESS" not-null="true" />
+        <property name="group" type="string">
+            <column name="GROUP" not-null="true" />
         </property>
-        <property name="cardId" type="string">
-            <column name="CARDID" not-null="true" />
+        <property name="people" type="string">
+            <column name="PEOPLE" not-null="true" />
         </property>
         <property name="createdDate" type="timestamp">
             <column name="CREATED_DATE" length="19" not-null="true" />

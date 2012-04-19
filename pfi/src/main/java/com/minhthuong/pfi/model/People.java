@@ -1,40 +1,38 @@
-package com.exoplatform.customerms.model;
+package com.minhthuong.pfi.model;
 
 import java.util.Date;
 
-public class Customer implements java.io.Serializable
+public class People implements java.io.Serializable
 {
 
-   private long customerId;
+   private long id;
 
    private String name;
 
    private String address;
-   
-   private String cardId;
 
    private Date createdDate;
 
-   public Customer()
+   public People()
    {
    }
 
-   public Customer(long customerId, String name, String address, Date createdDate)
+   public People(long id, String name, String address, Date createdDate)
    {
-      this.customerId = customerId;
+      this.id = id;
       this.name = name;
       this.address = address;
       this.createdDate = createdDate;
    }
 
-   public long getCustomerId()
+   public long getId()
    {
-      return this.customerId;
+      return this.id;
    }
 
-   public void setCustomerId(long customerId)
+   public void setId(long id)
    {
-      this.customerId = customerId;
+      this.id = id;
    }
 
    public String getName()

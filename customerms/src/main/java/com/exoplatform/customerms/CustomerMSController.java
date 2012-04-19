@@ -64,6 +64,7 @@ public class CustomerMSController implements org.springframework.web.portlet.mvc
       
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("helloWorldMessage", "Hello World");
+      model.put("list", list);
       return new ModelAndView("list_customer", model);
    }
 
