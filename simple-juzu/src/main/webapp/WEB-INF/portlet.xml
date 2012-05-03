@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009 eXo Platform SAS.
+
+    This is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as
+    published by the Free Software Foundation; either version 2.1 of
+    the License, or (at your option) any later version.
+
+    This software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this software; if not, write to the Free
+    Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+    02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+-->
+
+<portlet-app version="1.0" xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+   <portlet>
+      <portlet-name>HelloJuzu</portlet-name>
+      <display-name xml:lang="EN">Hello World by Juzu</display-name>
+      <portlet-class>org.juzu.portlet.JuzuPortlet</portlet-class>
+      <init-param>
+         <name>juzu.run_mode</name>
+         <value>prod</value>
+      </init-param>
+      <init-param>
+         <name>juzu.inject</name>
+         <value>weld</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+      </supports>
+      <portlet-info>
+         <title>Hello juzu</title>
+         <keywords>hello</keywords>
+      </portlet-info>
+   </portlet>
+</portlet-app>
