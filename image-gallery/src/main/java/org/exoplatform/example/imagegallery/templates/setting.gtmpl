@@ -1,0 +1,9 @@
+<form action="@{ImageGalleryApplication.saveSetting()}" method="post">
+   <table align="center">
+      <tr>
+         <td>Path</td>
+         <td><input type="text" class="span3" name="path" value="" placeholder="Path to Image folder" />*</td>
+      </tr>
+   </table>
+   <input type="submit" value="Save" class="btn btn-large" />
+</form>

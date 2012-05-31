@@ -16,33 +16,32 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.exoplatform.example;
+package org.exoplatform.example.imagegallery.model;
 
-import org.juzu.Path;
-import org.juzu.View;
-import org.juzu.template.Template;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.inject.Inject;
+import java.util.List;
 
 /**
  * @author <a href="kienna@exoplatform.com">Kien Nguyen</a>
  * @version $Revision$
  */
-public class HelloJuzu
+public class ImageGallery
 {
-   @Path("index.gtmpl")
-   @Inject
-   Template index;
-   
-   @View
-   public void index()
+   private List<Image> images;
+
+   public ImageGallery(List<Image> images)
    {
-      Map<String, Object> parameters = new HashMap<String, Object>();
-      parameters.put("city", "Ha Noi");
-      parameters.put("state", "Dong da");
-      index.render();
+      this.images = images;
    }
+   
+   public List<Image> getGallery()
+   {
+      return images;
+   }
+
+   public void setGallery(List<Image> gallery)
+   {
+      this.images = gallery;
+   }
+   
+   
 }

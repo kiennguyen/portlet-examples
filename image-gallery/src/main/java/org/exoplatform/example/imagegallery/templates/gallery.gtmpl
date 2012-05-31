@@ -1,0 +1,20 @@
+#{param name=gallery /}
+
+<a class="btn" href="@{ImageGalleryApplication.viewSettingAction()}">Setting</a>
+
+Image Gallery Sample
+<div id="myCarousel" class="carousel">
+   <% if (gallery != null) { %>
+      <div class="carousel-inner">
+         <% for (def img : gallery.images) { %>
+            <div class="item">
+               <img src="${img.url}" alt="" />
+            </div>
+         <% } %>
+      </div>
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+   <% } else {%>
+      No Image
+   <% } %>
+</div>

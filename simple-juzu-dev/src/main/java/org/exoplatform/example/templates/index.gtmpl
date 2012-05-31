@@ -1,1 +1,13 @@
-Hello World
+#{decorate path=main.gtmpl/}
+#{title value='Hello Juzu'/}
+#{param name=location/}
+#{param name=temperature/}
+
+The weather temperature in ${location} is ${temperature} degrees
+
+<% if (people.name != null) { %>
+<br />
+<br />
+   Hello ${people.name}.
+   I love you!!!! =))
+<% } %>

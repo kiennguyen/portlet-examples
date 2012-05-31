@@ -25,8 +25,8 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
 
    <portlet>
-      <portlet-name>HelloJuzu</portlet-name>
-      <display-name xml:lang="EN">Hello World by Juzu Dev</display-name>
+      <portlet-name>ImageGallery</portlet-name>
+      <display-name xml:lang="EN">Image Gallery</display-name>
       <portlet-class>org.juzu.portlet.JuzuPortlet</portlet-class>
       <init-param>
          <name>juzu.run_mode</name>
@@ -38,15 +38,21 @@
       </init-param>
       <init-param>
       		<name>juzu.src_path</name>
-      		<value>/home/kiennguyen/java/eXoProjects/kiennguyen/portlet-examples/simple-juzu-dev/src/main/java</value>
+      		<value>/home/kiennguyen/java/eXoProjects/kiennguyen/portlet-examples/image-gallery/src/main/java</value>
       </init-param>
       <supports>
          <mime-type>text/html</mime-type>
-         <portlet-mode>edit</portlet-mode>
       </supports>
       <portlet-info>
-         <title>Hello juzu dev</title>
-         <keywords>hello</keywords>
+         <title>Image Gallery</title>
+         <keywords>gallery</keywords>
       </portlet-info>
+      <portlet-preferences>
+         <preference>
+            <name>settingView</name>
+            <value>true</value>
+            <read-only>false</read-only>
+         </preference>
+      </portlet-preferences>
    </portlet>
 </portlet-app>

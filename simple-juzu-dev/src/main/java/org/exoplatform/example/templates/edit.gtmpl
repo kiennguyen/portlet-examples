@@ -1,0 +1,7 @@
+<div class="FormContainer">
+   <form action="@{HelloController.submit()}" method="post">
+     <label for="name">Your name:</label>
+     <input id="name" name="name" type="text" value=""/>
+     <input type="submit" value="Submit"/>
+   </form>
+</div>

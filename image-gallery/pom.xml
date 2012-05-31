@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
-   <groupId>org.exoplatform.example</groupId>
-   <artifactId>simple-juzu-dev</artifactId>
+   <groupId>org.exoplatform.example.imagegallery</groupId>
+   <artifactId>image-gallery</artifactId>
    <packaging>war</packaging>
    <version>1.0</version>
-   <name>simple-juzu-dev Maven portlet</name>
+   <name>image-gallery Maven portlet</name>
    <url>http://maven.apache.org</url>
    <dependencies>
       <dependency>
@@ -14,15 +14,15 @@
          <scope>test</scope>
       </dependency>
       <dependency>
-         <groupId>javax.inject</groupId>
-         <artifactId>javax.inject</artifactId>
-         <version>1</version>
-         <scope>provided</scope>
-      </dependency>
-      <dependency>
          <groupId>javax.portlet</groupId>
          <artifactId>portlet-api</artifactId>
          <version>2.0</version>
+         <scope>provided</scope>
+      </dependency>
+      <dependency>
+         <groupId>javax.inject</groupId>
+         <artifactId>javax.inject</artifactId>
+         <version>1</version>
          <scope>provided</scope>
       </dependency>
       <dependency>
@@ -38,21 +38,9 @@
       </dependency>
    </dependencies>
    <build>
-      <finalName>simple-juzu-dev</finalName>
+      <finalName>image-gallery</finalName>
       <pluginManagement>
          <plugins>
-         	  <plugin>
-			        <groupId>org.apache.maven.plugins</groupId>
-			        <artifactId>maven-source-plugin</artifactId>
-			        <executions>
-			          <execution>
-			            <id>attach-sources</id>
-			            <goals>
-			              <goal>jar-no-fork</goal>
-			            </goals>
-			          </execution>
-			        </executions>
-			      </plugin>
             <plugin>
                <artifactId>maven-compiler-plugin</artifactId>
                <version>2.3.2</version>
